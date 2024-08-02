@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Formation</title>
+    
+</head>
+<body style="font-family: Arial, sans-serif; margin: 20px; line-height: 1.6;">
+    <header style="text-align: center; margin-bottom: 20px;">
+        <h1 style="color: #4CAF50;">Team Formation</h1>
+    </header>
+
+    <main style="max-width: 600px; margin: auto;">
+        <form action="/submit_team" method="post" style="display: flex; flex-direction: column;" oninput="updateSummary()">
+            <label for="teamName" style="margin-bottom: 8px;">Team Name:</label>
+            <input type="text" id="teamName" name="teamName" required style="padding: 8px; margin-bottom: 16px;">
+
+            <label for="teamLeader" style="margin-bottom: 8px;">Team Leader:</label>
+            <input type="text" id="teamLeader" name="teamLeader" required style="padding: 8px; margin-bottom: 16px;">
+
+            <label for="teamMember1" style="margin-bottom: 8px;">Team Member 1:</label>
+            <input type="text" id="teamMember1" name="teamMember1" required style="padding: 8px; margin-bottom: 16px;">
+
+            <label for="teamMember2" style="margin-bottom: 8px;">Team Member 2:</label>
+            <input type="text" id="teamMember2" name="teamMember2" required style="padding: 8px; margin-bottom: 16px;">
+
+            <label for="teamMember3" style="margin-bottom: 8px;">Team Member 3:</label>
+            <input type="text" id="teamMember3" name="teamMember3" required style="padding: 8px; margin-bottom: 16px;">
+
+            <label for="projectCategory" style="margin-bottom: 8px;">Project Category:</label>
+            <select id="projectCategory" name="projectCategory" required style="padding: 8px; margin-bottom: 16px;">
+                <option value="web_development">Web Development</option>
+                <option value="mobile_app">Mobile App</option>
+                <option value="data_science">Data Science</option>
+            </select>
+
+            <input type="submit" value="Submit" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer;">
+
+            <h2 style="margin-top: 20px;">Team Summary</h2>
+            <output id="teamSummary" style="white-space: pre-wrap; background-color: #f9f9f9; padding: 10px; border: 1px solid #ddd;"></output>
+        </form>
+    </main>
+
+    <footer style="text-align: center; margin-top: 20px; color: #777;">
+        <p>&copy; 2024 Hackathon. All rights reserved.</p>
+    </footer>
+</body>
+</html>

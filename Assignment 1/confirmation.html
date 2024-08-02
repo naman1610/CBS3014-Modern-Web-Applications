@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Confirmation</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 20px; line-height: 1.6;">
+    <header style="text-align: center; margin-bottom: 20px;">
+        <h1 style="color: #4CAF50;">Registration Confirmation</h1>
+    </header>
+
+    <main style="max-width: 800px; margin: auto;">
+        <h1 style="color: #333;">Thank You for Registering!</h1>
+        <p style="color: #555;">Your registration details are as follows:</p>
+        
+        <div style="margin-bottom: 10px;">
+            <strong>Name:</strong> <span id="name"></span>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <strong>Email:</strong> <span id="email"></span>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <strong>Phone Number:</strong> <span id="phone"></span>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <strong>Skill Set:</strong> <span id="skillset"></span>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <strong>Level of Experience:</strong> <span id="experience"></span>
+        </div>
+
+        <a href="index.html" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px;">Back to Home</a>
+    </main>
+
+    <footer style="text-align: center; margin-top: 20px; color: #777;">
+        <p>&copy; 2024 Hackathon. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Assuming the registration details are passed via URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById('name').textContent = urlParams.get('name');
+        document.getElementById('email').textContent = urlParams.get('email');
+        document.getElementById('phone').textContent = urlParams.get('phone');
+        document.getElementById('skillset').textContent = urlParams.get('skillset');
+        document.getElementById('experience').textContent = urlParams.get('experience');
+    </script>
+</body>
+</html>
