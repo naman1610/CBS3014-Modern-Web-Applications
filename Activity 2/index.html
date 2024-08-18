@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After School Club Registration Form</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>After School Club Registration Form</h1>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="firstName">Student's First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Student's Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="birthDate">Student's Birth Date:</label>
+                <input type="date" id="birthDate" name="birthDate" required>
+            </div>
+            <div class="form-group">
+                <label for="grade">Student's Grade:</label>
+                <select id="grade" name="grade" required>
+                    <option value="">Select Grade</option>
+                    <option value="Kindergarten">Kindergarten</option>
+                    <option value="1st">1st Grade</option>
+                    <option value="2nd">2nd Grade</option>
+                    <option value="3rd">3rd Grade</option>
+                    <option value="4th">4th Grade</option>
+                    <option value="5th">5th Grade</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Which sessions will your student attend?</label>
+                <div class="radio-group">
+                    <input type="radio" id="beforeOnly" name="session" value="Before School Care Only" required>
+                    <label for="beforeOnly">Full-time Before School Care Only</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="afterOnly" name="session" value="After School Care Only">
+                    <label for="afterOnly">Full-time After School Care Only</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="beforeAndAfter" name="session" value="Before AND After School Care">
+                    <label for="beforeAndAfter">Full-time Before AND After School Care</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="dropIn" name="session" value="Drop-In Care">
+                    <label for="dropIn">Drop-In Before AND/OR After School Care</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="allergies">Please indicate any known allergies or special needs:</label>
+                <textarea id="allergies" name="allergies"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="parentFirstName">Parent/Guardian First Name:</label>
+                <input type="text" id="parentFirstName" name="parentFirstName" required>
+            </div>
+            <div class="form-group">
+                <label for="parentLastName">Parent/Guardian Last Name:</label>
+                <input type="text" id="parentLastName" name="parentLastName" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Parent/Guardian Phone:</label>
+                <input type="tel" id="phone" name="phone" title="10 digit phone number" pattern="[0-9]{10}" required>
+            </div>
+            <div class="form-group">
+                <label for="additionalPhone">Additional Phone Number:</label>
+                <input type="tel" id="additionalPhone" title="10 digit phone number" name="additionalPhone" pattern="[0-9]{10}">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <button type="submit">Submit Registration</button>
+        </form>
+    </div>
+    <div id="confirmation" class="hidden">
+        <h2>Registration Confirmation</h2>
+        <p id="confirmationDetails"></p>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
