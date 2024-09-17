@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="MuseumCollection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Artifact" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Category" type="CategoryType"/>
+              <xs:element name="ArtifactID" type="xs:ID"/>
+              <xs:element name="Name" type="xs:string"/>
+              <xs:element name="Description" type="xs:string"/>
+              <xs:element name="DateAcquired" type="DateAcquiredType"/>
+              <xs:element name="Condition" type="ConditionType"/>
+              <xs:choice>
+                <xs:sequence>
+                  <xs:element name="ArtistName" type="xs:string"/>
+                  <xs:element name="Year" type="YearType"/>
+                </xs:sequence>
+                <xs:sequence>
+                  <xs:element name="Material" type="xs:string"/>
+                  <xs:element name="SculptorName" type="xs:string"/>
+                </xs:sequence>
+                <xs:sequence>
+                  <xs:element name="Language" type="xs:string"/>
+                  <xs:element name="Author" type="xs:string"/>
+                </xs:sequence>
+                <xs:sequence>
+                  <xs:element name="OriginCountry" type="xs:string"/>
+                  <xs:element name="Age" type="xs:positiveInteger"/>
+                </xs:sequence>
+              </xs:choice>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="CategoryType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Painting"/>
+      <xs:enumeration value="Sculpture"/>
+      <xs:enumeration value="Manuscript"/>
+      <xs:enumeration value="HistoricalObject"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="DateAcquiredType">
+    <xs:restriction base="xs:date">
+      <xs:pattern value="\d{4}-\d{2}-\d{2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ConditionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Excellent"/>
+      <xs:enumeration value="Good"/>
+      <xs:enumeration value="Fair"/>
+      <xs:enumeration value="Poor"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="YearType">
+    <xs:restriction base="xs:integer">
+      <xs:maxInclusive value="2024"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

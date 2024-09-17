@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MuseumCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="museum_schema.xsd">
+  <Artifact>
+    <Category>Painting</Category>
+    <ArtifactID>P001</ArtifactID>
+    <Name>Starry Night</Name>
+    <Description>A night scene showing a village with a swirling sky and a large crescent moon.</Description>
+    <DateAcquired>2020-03-15</DateAcquired>
+    <Condition>Excellent</Condition>
+    <ArtistName>Vincent van Gogh</ArtistName>
+    <Year>1889</Year>
+  </Artifact>
+
+  <Artifact>
+    <Category>Sculpture</Category>
+    <ArtifactID>S001</ArtifactID>
+    <Name>David</Name>
+    <Description>A marble statue of the Biblical hero David.</Description>
+    <DateAcquired>2021-07-22</DateAcquired>
+    <Condition>Good</Condition>
+    <Material>Marble</Material>
+    <SculptorName>Michelangelo</SculptorName>
+  </Artifact>
+
+  <Artifact>
+    <Category>Manuscript</Category>
+    <ArtifactID>M001</ArtifactID>
+    <Name>The Canterbury Tales</Name>
+    <Description>A collection of 24 stories written in Middle English.</Description>
+    <DateAcquired>2019-11-30</DateAcquired>
+    <Condition>Fair</Condition>
+    <Language>Middle English</Language>
+    <Author>Geoffrey Chaucer</Author>
+  </Artifact>
+
+  <Artifact>
+    <Category>HistoricalObject</Category>
+    <ArtifactID>H001</ArtifactID>
+    <Name>Egyptian Scarab Seal</Name>
+    <Description>An ancient Egyptian artifact used as a seal and amulet.</Description>
+    <DateAcquired>2022-01-10</DateAcquired>
+    <Condition>Good</Condition>
+    <OriginCountry>Egypt</OriginCountry>
+    <Age>3500</Age>
+  </Artifact>
+</MuseumCollection>
