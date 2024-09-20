@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Company xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="company_validity.xsd">
+    <CompanyDetails>
+        <CompanyName>Tech Innovators Inc.</CompanyName>
+        <Address>
+            <Street>123 Innovation Drive</Street>
+            <City>Techville</City>
+            <State>CA</State>
+            <ZipCode>94043</ZipCode>
+        </Address>
+        <ContactNumber>+1-800-TECH</ContactNumber>
+        <Email>contact@techinnovators.com</Email>
+    </CompanyDetails>
+    <Projects>
+        <Project>
+            <ProjectID>P001</ProjectID>
+            <ProjectName>AI Development Platform</ProjectName>
+            <ProjectManager>Jane Doe</ProjectManager>
+            <Deadline>2024-12-31</Deadline>
+            <Status>On Track</Status>
+            <TeamMembers>
+                <Member>
+                    <ID>M001</ID>
+                    <Name>John Smith</Name>
+                    <Role>Backend Developer</Role>
+                </Member>
+                <Member>
+                    <ID>M002</ID>
+                    <Name>Emily Johnson</Name>
+                    <Role>Frontend Developer</Role>
+                </Member>
+            </TeamMembers>
+        </Project>
+        <Project>
+            <ProjectID>P002</ProjectID>
+            <ProjectName>Mobile App Revamp</ProjectName>
+            <ProjectManager>Mike Brown</ProjectManager>
+            <Deadline>2024-09-30</Deadline>
+            <Status>Behind Schedule</Status>
+            <TeamMembers>
+                <Member>
+                    <ID>M003</ID>
+                    <Name>Sarah Lee</Name>
+                    <Role>UI/UX Designer</Role>
+                </Member>
+                <Member>
+                    <ID>M004</ID>
+                    <Name>David Wilson</Name>
+                    <Role>QA Engineer</Role>
+                </Member>
+            </TeamMembers>
+        </Project>
+    </Projects>
+</Company>
