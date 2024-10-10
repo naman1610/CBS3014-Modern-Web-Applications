@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermarket Inventory Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Supermarket Inventory Management System</h1>
+        
+        <?php if (isset($message)): ?>
+            <div class="message"><?php echo $message; ?></div>
+        <?php endif; ?>
+
+        <div class="form-container">
+            <h2>Add New Item</h2>
+            <form method="post">
+                <label for="name">Item Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="category">Category:</label>
+                <input type="text" id="category" name="category" required>
+                
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" step="0.01" required>
+                
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" required>
+                
+                <label for="code">Item Code:</label>
+                <input type="text" id="code" name="code" required>
+                
+                <input type="submit" name="add" value="Add Item">
+            </form>
+        </div>
+
+        <div class="form-container">
+            <h2>Search Item</h2>
+            <form method="post">
+                <label for="query">Search by name:</label>
+                <input type="text" id="query" name="query" required>
+                <input type="submit" name="search" value="Search">
+            </form>
+        </div>
+
+        <?php if (isset($searchResults)): ?>
+            <h2>Search Results</h2>
+            <?php if (empty($searchResults)): ?>
+                <p>No items found.</p>
+            <?php else: ?>
+                <table>
+                    <tr><th>Name</th><th>Category</th><th>Price</th><th>Quantity</th><th>Code</th></tr>
+                    <?php foreach ($searchResults as $item): ?>
+                        <tr>
+                            <td><?php echo $item['name']; ?></td>
+                            <td><?php echo $item['category']; ?></td>
+                            <td>$<?php echo $item['price']; ?></td>
+                            <td><?php echo $item['quantity']; ?></td>
+                            <td><?php echo $item['code']; ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </table>
+            <?php endif; ?>
+        <?php endif; ?>
+
+        <h2>Current Inventory</h2>
+        <?php if (empty($_SESSION['inventory'])): ?>
+            <p>No items in inventory.</p>
+        <?php else: ?>
+            <table>
+                <tr><th>Name</th><th>Category</th><th>Price</th><th>Quantity</th><th>Code</th></tr>
+                <?php foreach ($_SESSION['inventory'] as $item): ?>
+                    <tr>
+                        <td><?php echo $item['name']; ?></td>
+                        <td><?php echo $item['category']; ?></td>
+                        <td>$<?php echo $item['price']; ?></td>
+                        <td><?php echo $item['quantity']; ?></td>
+                        <td><?php echo $item['code']; ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </table>
+        <?php endif; ?>
+    </div>
+</body>
+</html>
